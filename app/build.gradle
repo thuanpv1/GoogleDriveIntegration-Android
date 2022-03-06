@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion 32
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "info.devexchanges.googledrive"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
     }
@@ -20,7 +20,8 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.google.android.gms:play-services-drive:9.0.2'
-    compile 'com.android.support:appcompat-v7:23.4.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.android.gms:play-services-drive:10.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:23.4.0'
 }
